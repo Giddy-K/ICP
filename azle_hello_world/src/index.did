@@ -1,0 +1,6 @@
+service: () -> {
+    getAllCards: () -> (record {id:text; owner:principal; name:text; rarity:text}) query;
+    getOwnedCards: (principal) -> (record {id:text; name:text; rarity:text}) query;
+    mintCard: (text, text, text, principal) -> (text);
+    transferCard: (text, principal) -> (bool);
+}
